@@ -6,45 +6,52 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:elevation="2dp">
+
             <ImageView
                 android:id="@+id/shoePic"
                 android:layout_width="match_parent"
                 android:layout_height="194dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/shoe1" />
+
             <TextView
                 android:id="@+id/shoeRetailer"
-                android:layout_width="wrap_content"
+                android:layout_width="88dp"
                 android:layout_height="wrap_content"
-                android:text="Retailer"/>
+                android:text="Retailer" />
+
             <TextView
                 android:id="@+id/shoeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nike AirForce1"
                 android:layout_gravity="center"
-                android:textSize="24sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+                android:text="Nike AirForce1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/shoePrice"
-                android:layout_width="wrap_content"
+                android:layout_width="88dp"
                 android:layout_height="wrap_content"
-                android:text="Retailer"/>
+                android:text="Price" />
+
             <Button
                 android:id="@+id/tryButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Try these"
-                android:elevation="2dp"
                 android:layout_gravity="center"
-                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-                app:icon="@drawable/ic_camera"
-                />
+                android:elevation="2dp"
+                android:text="Try these"
+                app:icon="@drawable/ic_camera" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

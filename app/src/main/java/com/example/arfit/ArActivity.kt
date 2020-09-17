@@ -4,6 +4,7 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.Toast
@@ -28,15 +29,21 @@ class ArActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ar)
 
         val modelName = intent.getStringExtra(EXTRA_MESSAGE)
+        Log.d("DBG", "From intent: $modelName")
 
         fragment = supportFragmentManager.findFragmentById(R.id.sceneform_fragment) as ArFragment
 
         addBtn.setOnClickListener {
             addObject()
         }
-
-        val modelUri =
-                Uri.parse("untitled.gltf")
+        var modelUri = Uri.parse("")
+        if (modelName == "Nike Revolution 5") {
+            modelUri = Uri.parse("shoeLeft.gltf")
+            Log.d("DBG", modelUri.toString())
+        } else if (modelName == "Custom Revolution 5") {
+            modelUri = Uri.parse("untitled.gltf")
+            Log.d("DBG", modelUri.toString())
+        }
 
         val renderableFuture = ModelRenderable.builder()
             .setSource(
@@ -49,7 +56,7 @@ class ArActivity : AppCompatActivity() {
                     .setRecenterMode(RenderableSource.RecenterMode.ROOT)
                     .build()
             )
-            .setRegistryId("CesiumMan")
+            .setRegistryId("Shoe")
             .build()
             .thenAccept { testRenderable = it }
             .exceptionally { _ ->

@@ -36,7 +36,7 @@ class ArActivity : AppCompatActivity() {
         }
 
         val modelUri =
-                Uri.parse("https://users.metropolia.fi/~nikoholo/gltf/shoeLeft.gltf")
+                Uri.parse("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf")
 
         val renderableFuture = ModelRenderable.builder()
             .setSource(

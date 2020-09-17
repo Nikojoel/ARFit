@@ -36,7 +36,7 @@ class ArActivity : AppCompatActivity() {
         }
 
         val modelUri =
-                Uri.parse("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf")
+                Uri.parse("shoeLeft.gltf")
 
         val renderableFuture = ModelRenderable.builder()
             .setSource(
@@ -45,7 +45,7 @@ class ArActivity : AppCompatActivity() {
                     modelUri,
                     RenderableSource.SourceType.GLTF2
                 )
-                    .setScale(0.2f) // Scale the original model to 20%.
+                    .setScale(0.1f) // Scale the original model to 10%.
                     .setRecenterMode(RenderableSource.RecenterMode.ROOT)
                     .build()
             )

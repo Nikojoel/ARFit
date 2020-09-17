@@ -36,7 +36,7 @@ class ArActivity : AppCompatActivity() {
         }
 
         val modelUri =
-                Uri.parse("shoeLeft.gltf")
+                Uri.parse("untitled.gltf")
 
         val renderableFuture = ModelRenderable.builder()
             .setSource(

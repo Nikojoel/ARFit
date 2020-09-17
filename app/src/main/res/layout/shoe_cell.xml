@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/shoePic"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/shoe1" />
+            <TextView
+                android:id="@+id/shoeRetailer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retailer"/>
+            <TextView
+                android:id="@+id/shoeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nike AirForce1"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            <TextView
+                android:id="@+id/shoePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retailer"/>
+            <Button
+                android:id="@+id/tryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try these"
+                android:elevation="2dp"
+                android:layout_gravity="center"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                app:icon="@drawable/ic_camera"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
